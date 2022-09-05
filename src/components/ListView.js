@@ -1,14 +1,14 @@
-import { useEffect, useState } from "react";
-import DetailView from "./DetailView";
-import fetchPokemonDetails from "./fetchPokemonDetails";
+import TileView from "./TileView";
 
 const ListView = ({ pokemons }) => {
   return pokemons ? (
-    pokemons.map((pokemon) => (
-      <DetailView key={pokemon.name} url={pokemon.url} />
-    ))
+    <div className="grid grid-cols-auto gap-4">
+      {pokemons.map((pokemon) => (
+        <TileView key={pokemon.name} url={pokemon.url} />
+      ))}
+    </div>
   ) : (
-    <h1>loading</h1>
+    <h1>loading...</h1>
   );
 };
 

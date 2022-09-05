@@ -28,7 +28,7 @@ const SearchBar = () => {
   };
 
   return (
-    <div>
+    <div className="mb-3 xl:w-96">
       <input
         placeholder="Search"
         onChange={(e) => setInput(e.target.value)}
